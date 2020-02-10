@@ -52,9 +52,21 @@
       </a-assets>
 
   <!-- Using the asset management system. -->
-      <a-entity animation="property:  position;  to:  1 25 10;  dur:  10000;  from:  1 1 10;  delay:  3000; loop:true;">
-  <a-gltf-model src="#drone" position="1 1 10 " scale="0.01 0.01 0.01" animation-mixer></a-gltf-model>
+      <a-entity
+        animation="property: position; to: 5 30 0.295; dur: 10000; from: 5 0.98872 0.295; delay: 3000; loop: true"
+        
+        scale="2 2 2"
+      >
+        <a-gltf-model
+          src="#drone"
+          position="5 0.98872 0.295"
+          scale="0.01 0.01 0.01"
+          animation-mixer=""
+          gltf-model="assets/scene.gltf"
+          rotation="0 -99.8871701719272 0"
+        ></a-gltf-model>
       </a-entity>
+     
       <a-curvedimage
         src="#keyboard"
         height="3.0"
