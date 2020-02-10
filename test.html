@@ -43,17 +43,16 @@
           id="webber"
           src="https://cdn.glitch.com/887246ca-ea31-4595-bb5e-3d75aae7534e%2FWeber%231.png?v=1580822502714"
         />
-        
-        <img
-          id="gif"
-             autoplay
-          src="https://cdn.glitch.com/887246ca-ea31-4595-bb5e-3d75aae7534e%2FfxVE.gif?v=1581360073496"
-        />
-        
-        
+       
       </a-assets>
-      <a-image material="shader:gif;src:url(https://cdn.glitch.com/887246ca-ea31-4595-bb5e-3d75aae7534e%2FfxVE.gif?v=1581360073496);" position="0 1 -5"></a-image>
-      <!-- Using the asset management system. -->
+      
+      <a-assets>
+        <a-asset-item id="drone" src="assets/scene.gltf"></a-asset-item>
+      </a-assets>
+
+  <!-- Using the asset management system. -->
+  <a-gltf-model src="#drone" position="1 1 -4 "></a-gltf-model>
+      
       <a-curvedimage
         src="#keyboard"
         height="3.0"
