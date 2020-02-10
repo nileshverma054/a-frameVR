@@ -1,0 +1,23 @@
+body {
+  background: url("https://cdn.glitch.com/887246ca-ea31-4595-bb5e-3d75aae7534e%2Flux-interaction-xL3xDwWx7_s-unsplash%20(1).jpg?v=1580962423780");
+  background-position: center;  
+}
+
+.box {
+  position: absolute;
+  top: 30%;
+}
+.logo {
+  width: 100%;
+}
+
+@media (max-width: 576px) 
+{ 
+  .title{
+    font-size:24px;
+  }
+
+  .box {
+    top:10%;
+  }
+}
