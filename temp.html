@@ -1,0 +1,275 @@
+<!--
+  ignite logo at back
+-->
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+    <script src="https://rawgit.com/oscarmarinmiro/aframe-video-controls/master/dist/aframe-video-controls.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-entity environment="preset: tron; dressingAmount: 500"></a-entity>
+
+      <a-assets>
+        <img
+          id="my-image"
+          src="https://cdn.glitch.com/887246ca-ea31-4595-bb5e-3d75aae7534e%2Fignite%232.png?v=1580958872937"
+        />
+        <img
+          id="tv-trivia"
+          src="https://cdn.glitch.com/887246ca-ea31-4595-bb5e-3d75aae7534e%2Fthumbnails%2FTV_Trivia.png?1580820958998"
+        />
+        <img
+          id="keyboard"
+          src="https://cdn.glitch.com/887246ca-ea31-4595-bb5e-3d75aae7534e%2Fkeyboard.png?v=1580821064928"
+        />
+        <img
+          id="placement"
+          src="https://cdn.glitch.com/887246ca-ea31-4595-bb5e-3d75aae7534e%2Fmock_placement.png?v=1580820954098"
+        />
+        <img
+          id="brain-chase"
+          src="https://cdn.glitch.com/887246ca-ea31-4595-bb5e-3d75aae7534e%2Fbrain%20chase.png?v=1580820951617"
+        />
+        <img
+          id="coc"
+          src="https://cdn.glitch.com/887246ca-ea31-4595-bb5e-3d75aae7534e%2FCoding%231.png?v=1580822493128"
+        />
+        <img
+          id="webber"
+          src="https://cdn.glitch.com/887246ca-ea31-4595-bb5e-3d75aae7534e%2FWeber%231.png?v=1580822502714"
+        />
+      </a-assets>
+
+      <!-- Using the asset management system. -->
+      <a-curvedimage
+        src="#keyboard"
+        height="3.0"
+        radius="5.7"
+        theta-length="50"
+        rotation="0 220 0"
+        scale="1.3 2 1.25"
+        position="-20.74 7.26 -3.84"
+        material="vertexColors: face"
+        geometry="thetaLength: 61.23"
+      ></a-curvedimage>
+
+      <a-curvedimage
+        src="#brain-chase"
+        height="3.0"
+        radius="5.7"
+        theta-length="50"
+        rotation="0.05 181.26 -1.8099999999999998"
+        scale="1.3 2 1.25"
+        position="-21.87 7.62 -16.2"
+        material="vertexColors: face"
+        geometry="thetaLength: 61.23"
+      ></a-curvedimage>
+
+      <a-curvedimage
+        src="#coc"
+        height="3.0"
+        radius="5.7"
+        theta-length="50"
+        rotation="0 163.6121091041725 0"
+        scale="2.5 2.67 1.71"
+        position="-6.46389 8.0 -14.63859"
+        material=""
+        geometry="thetaLength: 50"
+      ></a-curvedimage>
+
+      <a-curvedimage
+        src="#tv-trivia"
+        height="3.0"
+        radius="5.7"
+        theta-length="50"
+        rotation="0 150 0"
+        scale="2.38 2.74 1.71"
+        position="8.59317 6.88064 -10.28811"
+        material=""
+        geometry="thetaLength: 50"
+      ></a-curvedimage>
+
+      <a-curvedimage
+        src="#placement"
+        height="3.0"
+        radius="5.7"
+        theta-length="50"
+        rotation="0 90 0"
+        scale="1.21 1.84 1.87"
+        position="9.96 6.16 -12.26682"
+        material=""
+        geometry="thetaLength: 50"
+      ></a-curvedimage>
+
+      <a-curvedimage
+        src="#webber"
+        height="3.0"
+        radius="5.7"
+        theta-length="50"
+        rotation="0 58.94990866762501 0"
+        scale="1.27 2.1 2.06"
+        position="18.45752 5.97217 -8.07136"
+        material=""
+        geometry="thetaLength: 50"
+      ></a-curvedimage>
+
+      <!-- back -->
+      <a-curvedimage
+        src="#my-image"
+        height="3.0"
+        radius="5.7"
+        theta-length="50"
+        rotation="0 29.999999999999996 0"
+        scale="4.8 3.8 1.8"
+        position="1.49443 3.62711 11.71759"
+        material=""
+        geometry="thetaLength: 50; skipCache: true"
+        raycaster=""
+        cursor=""
+        animation="property: object3D.position.y; to: 4; dir: alternate; loop: true"
+      ></a-curvedimage>
+      <!-- text -->
+      <a-entity
+        text="value: Keyboard Shuffling"
+        position="-27.63 3.82 -10.98"
+        scale="15 15 15"
+        rotation="-2.33 86.9 2.88"
+      ></a-entity>
+
+      <a-entity
+        text="value: Brain Chase"
+        position="-21.45946 3.25783 -26.26541"
+        scale="15 15 15"
+        rotation="0 47.645451369693866 0"
+      ></a-entity>
+
+      <a-entity
+        text="value: Clash Of Coders"
+        position="-3.69373 4.5 -23.24273"
+        scale="15 15 15"
+        rotation="0 -1.1705527754522718 0"
+      ></a-entity>
+
+      <a-entity
+        text="value: TV Trivia"
+        position="13.78971 3.04866 -18.71619"
+        scale="15 15 15"
+        rotation="0 -12.18176 0"
+      ></a-entity>
+
+      <a-entity
+        text="value: Mock Placement"
+        position="22.01652 3.05099 -10.77911"
+        scale="15 15 15"
+        rotation="0 -48.896791194259585 0"
+      ></a-entity>
+
+      <a-entity
+        text="value: Webber"
+        position="26.99923 2.21873 1.27228"
+        scale="15 15 15"
+        rotation="0 -82.43602164783258 -0.14974"
+      ></a-entity>
+
+      <a-entity
+        text="value: Sat, Feb 15"
+        position="11.13534 10.70594 -15.74499"
+        scale="28 28 28"
+        rotation=""
+      ></a-entity>
+      <!--
+      <a-link
+        href="content.html"
+        title="keep pointer here to watch promo"
+        position="0 4.53 -17.14"
+        geometry="primitive: circle; segments: 64; thetaLength: 0"
+        material="shader: portal; side: double; borderEnabled: 0"
+        link=""
+        scale="3 3 3"
+      >
+      </a-link>
+-->
+      <!-- //text -->
+      <a-assets>
+        <!--
+        <audio
+          src="https://cdn.glitch.com/887246ca-ea31-4595-bb5e-3d75aae7534e%2FMBB_-_Beach_(Vlog_No_Copyright_Music)(256k)?v=1580852962855"
+          autoplay="true"
+          position="0 2 20"
+        ></audio>
+        
+        <a-sound src="https://cdn.glitch.com/887246ca-ea31-4595-bb5e-3d75aae7534e%2FMBB_-_Beach_(Vlog_No_Copyright_Music)(256k)?v=1580852962855"
+          position="-3 1 -4"></a-sound>
+        -->
+      </a-assets>
+
+      <a-assets>
+        <video
+          id="myvideo"
+          autoplay
+          loop="true"
+          src="https://cdn.glitch.com/887246ca-ea31-4595-bb5e-3d75aae7534e%2FVID-20200206-WA0006.mp4?v=1580985924658"
+        ></video>
+      </a-assets>
+      <a-video
+        src="#myvideo"
+        width="3"
+        height="1.5"
+        position="-9 5.17 16.58"
+        material=""
+        geometry="height: 1.54"
+        rotation="0 160 0"
+        scale="6 6 6"
+      ></a-video>
+          <a-entity video-controls="src:#myvideo"></a-entity>
+      <!--
+      <a-assets>
+        <audio
+          src="https://cdn.glitch.com/887246ca-ea31-4595-bb5e-3d75aae7534e%2FMBB_-_Beach_(Vlog_No_Copyright_Music)(256k)?v=1580852962855"
+          autoplay
+          preload
+        ></audio>
+      </a-assets>
+
+-->
+      <a-camera>
+        <a-cursor
+          color="#fff"
+          material=""
+          raycaster=""
+          cursor="fuseTimeout: 500"
+          geometry=""
+        ></a-cursor>
+      </a-camera>
+      <!--
+      <a-entity position="0 1.8 4">
+        <a-camera id="camera" look-controls="" wasd-controls="" camera="active:true" rotation="-0.2291831180523293 -0.11459155902616465 0" position="0 0 0">
+          
+          <a-ring radius-outer="0.30" radius-inner="0.20" position="0 0 -3" material="color: cyan; shader: flat" cursor="maxDistance: 30; fuse: true" geometry="primitive:ring;radiusOuter:0.30;radiusInner:0.20" raycaster="">
+            <a-animation begin="click" easing="ease-in" attribute="scale" fill="backwards" from="0.1 0.1 0.1" to="1 1 1" dur="150"></a-animation>
+            <a-animation begin="fusing" easing="ease-in" attribute="scale" fill="forwards" from="1 1 1" to="0.1 0.1 0.1" dur="1500"></a-animation>
+          </a-ring>
+        </a-camera>
+      </a-entity>
+--><script>
+          AFRAME.registerComponent('video-handler',{
+          init: functon(){
+           let el = this.el;
+           let vid = document.querySelector("#myvideo");
+           vid.pause();
+           el.addEventListener('mouseenter',function(){
+              vid.play();
+           });
+           el.addEventListener('mouseleave',function(){
+              vid.pause();
+           });
+          }
+        });
+      </script>
+    </a-scene>
+  </body>
+</html>

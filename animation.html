@@ -1,0 +1,46 @@
+ <html>
+  <head>
+    <title>My A-Frame Scene</title>
+    <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+     
+  </head>
+
+  <body>
+    <a-scene>
+     <a-entity environment="preset: tron; dressingAmount: 500"></a-entity>
+<!--
+
+      <a-assets>
+        <img
+          id="coc"
+          src="https://sticky-gemini-jru9xd0a7m.glitch.me/assets/1.jpg"
+        />
+      </a-assets>
+        <a-curvedimage
+        src="#coc"
+        height="3.0"
+        radius="5.7"
+        theta-length="50"
+        rotation="0 163.6121091041725 0"
+        scale="2.5 2.67 1.71"
+        position="-6.46389 6.9477 -14.63859"
+        material=""
+        geometry="thetaLength: 50"
+      ></a-curvedimage>
+-->
+      
+      <a-assets>
+        <a-asset-item id="duck" src="https://sticky-gemini-jru9xd0a7m.glitch.me/assets/scene.gltf"></a-asset-item>
+      </a-assets>
+      
+      <a-entity
+                gltf-model="#duck"
+                position="0 1.5 -4">
+      </a-entity>
+      
+      
+      
+</a-scene>
+  </body>
+</html>

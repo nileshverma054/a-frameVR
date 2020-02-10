@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+  </head>
+  <body>
+    <script>
+          window.addEventListener('vrdisplayactivate' function (evt) {
+        /* A page can now start presenting in the headset */
+        vrDisplay.requestPresent([{ source: myCanvas }]).then(function () { ... });
+      }
+    </script>
+    <a-scene>
+      <a-entity environment="preset: forest; dressingAmount: 500"></a-entity>
+      <a-assets>
+        <video
+          id="myvideo"
+          autoplay
+          loop="true"
+          src="https://cdn.glitch.com/887246ca-ea31-4595-bb5e-3d75aae7534e%2FVID-20200206-WA0006.mp4?v=1580985924658"
+        ></video>
+      </a-assets>
+      <!--
+      <a-videosphere src="#antarctica"></a-videosphere>
+-->
+      <a-video
+        src="#myvideo"
+        width="3"
+        height="1.5"
+        position="0 1.6 -1.8"
+      ></a-video>
+
+      <a-link
+        href="test.html"
+        title="Back to home"
+        position="0 2 12"
+        geometry="primitive: circle; segments: 64"
+        material="shader: portal; side: double; borderEnabled: 0; blending: additive; backgroundColor: #80ff80"
+        link="backgroundColor: #80ff80"
+        scale="2 2 2"
+        rotation="0 180 0"
+      >
+        <a-entity
+          text="color: white; align: center; font: kelsonsans; value: Back to home; width: 5"
+          position="0 1.5 0"
+          rotation=""
+        ></a-entity
+        ><a-entity
+          geometry="primitive: sphere; segmentsWidth: 64; segmentsHeight: 64; phiLength: 180; thetaLength: 360"
+          material="shader: portal; borderEnabled: 0; side: back"
+          rotation="0 180 0"
+          position=""
+          visible="false"
+        ></a-entity
+        ><a-entity
+          geometry="primitive: sphere; radius: 10; segmentsWidth: 64; segmentsHeight: 64"
+          material="shader: portal; borderEnabled: 0; side: back"
+          visible="false"
+        ></a-entity
+      ></a-link>
+      <a-camera>
+        <a-cursor
+          color="#fff"
+          material=""
+          raycaster=""
+          cursor="fuseTimeout: 2000"
+          geometry=""
+        ></a-cursor>
+      </a-camera>
+    </a-scene>
+  </body>
+</html>
