@@ -8,13 +8,43 @@
     <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
     <script src="https://rawgit.com/oscarmarinmiro/aframe-video-controls/master/dist/aframe-video-controls.min.js"></script>
-    <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script> 
   </head>
   <body>
     <a-scene>
-      <a-entity environment="preset: tron; dressingAmount: 500"></a-entity>
-   <a-entity environment="preset: ; dressingAmount: 500"></a-entity>
+      <a-entity
+        environment="preset: tron; dressingAmount: 500; skyType: gradient; shadow: true; shadowSize: 100; ground: spikes; groundTexture: squares; groundColor: #ffffff; groundColor2: #000000; dressing: apparatus"
+        visible=""
+        ><a-entity
+          class="environment"
+          position="0 50 0"
+          light="type: hemisphere; color: #848d9c; intensity: 0.6; groundColor: #ffffff"
+          visible=""
+        ></a-entity
+        ><a-entity
+          class="environment"
+          position="-0.72 0.62 0.4"
+          light="intensity: 0.6; castShadow: true; shadowCameraLeft: -100; shadowCameraBottom: -100; shadowCameraRight: 100; shadowCameraTop: 100"
+          visible=""
+        ></a-entity
+        ><a-entity
+          rotation="-90 0 0"
+          class="environmentGround environment"
+          visible=""
+          scale="1 1 4.91"
+          shadow="cast: false; receive: false"
+        ></a-entity
+        ><a-entity class="environmentDressing environment" visible=""></a-entity
+        ><a-sky
+          radius="200"
+          geometry=""
+          theta-length="110"
+          class="environment"
+          material="shader: gradientshader; topColor: #091b39; bottomColor: #284a9e"
+          visible=""
+        ></a-sky
+        ><a-entity id="stars" visible="false"></a-entity
+      ></a-entity>
+
       <a-assets>
         <img
           id="my-image"
@@ -44,27 +74,9 @@
           id="webber"
           src="https://cdn.glitch.com/887246ca-ea31-4595-bb5e-3d75aae7534e%2FWeber%231.png?v=1580822502714"
         />
-       
-      </a-assets>
-      
-      <a-assets>
-        <a-asset-item id="drone" src="assets/scene.gltf"></a-asset-item>
       </a-assets>
 
-  <!-- Using the asset management system. -->
-       
-        <a-gltf-model
-          src="#drone"
-          position="6.170 1.323 0.295"
-          scale="0.01 0.01 0.01"
-          animation-mixer=""
-          gltf-model="assets/scene.gltf"
-          rotation="0 -99.8871701719272 0"
-          animation="property: position; from:6.170 1.8 -1.55; to: -60 2.323 -1.8; dur: 15500; loop: true; easing: easeInQuad"            
-        ></a-gltf-model>
-      
-      <a-gltf-model src="#drone" position="7.47936 2.19073 18.64914" scale="0.02 0.02 0.02" animation-mixer="" gltf-model="assets/scene.gltf" rotation="0 29.194491493095967 0"></a-gltf-model>
-          
+      <!-- Using the asset management system. -->
       <a-curvedimage
         src="#keyboard"
         height="3.0"
@@ -230,6 +242,7 @@
       <a-assets>
         <video
           id="myvideo"
+          autoplay
           loop="true"
           src="https://cdn.glitch.com/887246ca-ea31-4595-bb5e-3d75aae7534e%2FVID-20200206-WA0006.mp4?v=1580985924658"
         ></video>
@@ -244,7 +257,7 @@
         rotation="0 160 0"
         scale="6 6 6"
       ></a-video>
-      <a-entity video-controls="src:#myvideo" size="4.0"></a-entity>
+      <a-entity video-controls="src:#myvideo"></a-entity>
       <!--
       <a-assets>
         <audio
@@ -255,6 +268,26 @@
       </a-assets>
 
 -->
+
+      <a-gltf-model
+        src="#drone"
+        position="6.170 1.323 0.295"
+        scale="0.01 0.01 0.01"
+        animation-mixer=""
+        gltf-model="assets/scene.gltf"
+        rotation="0 -99.8871701719272 0"
+        animation="property: position; from:6.170 1.8 -1.55; to: -60 2.323 -1.8; dur: 15500; loop: true; easing: easeInQuad"
+      ></a-gltf-model>
+
+      <a-gltf-model
+        src="#drone"
+        position="7.47936 2.19073 18.64914"
+        scale="0.02 0.02 0.02"
+        animation-mixer=""
+        gltf-model="assets/scene.gltf"
+        rotation="0 29.194491493095967 0"
+      ></a-gltf-model>
+
       <a-camera>
         <a-cursor
           color="#fff"
@@ -274,25 +307,7 @@
           </a-ring>
         </a-camera>
       </a-entity>
--->
-      <!--
-      <a-entity
-        rotation="0 90 0"
-        animation="property: rotation; to: 0 90 0; loop: true; dur: 10000; from: 0 -90 0"
-      >
-        <a-sphere position="0 1.6 -5" material="" geometry=""></a-sphere>
-      </a-entity>
-      <a-entity
-        id="leftHand"
-        position="-0.5338526368141174 1.3592101335525513 0.0604884997010231"
-        rotation="44.447732293527565 74.2266817294528 26.961093736150637"
-        gltf-model="assets/avatar3/avatar3-hand-left.gltf"
-        motion-capture-replayer="loop:true"
-      ></a-entity
--->
-      
-      
-      <script>
+--><script>
           AFRAME.registerComponent('video-handler',{
           init: functon(){
            let el = this.el;
